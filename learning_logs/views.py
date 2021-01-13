@@ -13,6 +13,7 @@ from .forms import TopicForm, EntryForm
 
 def index(request):
 	return render(request, 'learning_logs/index.html')
+	
 
 
 def topics(request):
@@ -23,10 +24,11 @@ def topics(request):
 
 
 def topic(request, topic_id):
-	topic = Topic.objects.get(id=topic_id)
-	entries = topic.entry_set.order_by('-date_added')
-	context = {'topic': topic, 'entries': entries}
-	return render(request, 'learning_logs/topic.html', context)
+    """Show a single topic and all its entries."""
+    topic = Topic.objects.get(id=topic_id)
+    entries = topic.entry_set.order_by('-date_added')
+    context = {'topic': topic, 'entries': entries}
+    return render(request, 'learning_logs/topic.html', context)
 
 
 def new_topic(request):

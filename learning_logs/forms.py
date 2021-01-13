@@ -11,9 +11,13 @@ class TopicForm(forms.ModelForm):
 
 
 
+# classe que eu digite, NAO FUNCONOU
+
 class EntryForm(forms.ModelForm):
 	class Meta:
 		model = Entry
 		fields = ['text']
-		labels = ['text': '']
+		labels = {'text': 'Entrada'} # nao tinha func., tinha posto chaves.
 		widgets = {'text': forms.Textarea(attrs={'cols': 80})}
+
+
