@@ -1,13 +1,20 @@
 {% extends "learning_logs/base.html" %}
 
-{% block content %}
+{% block page_header %}
+<div class="jumbotron"> 
+<h1 class="display-3">Miniblog do Eliel.</h1>
+	<p>
+		Este mini-blog foi criado com intuito de organizar os estudos de Python, Django, programação em geral...ou, ainda, qualquer tema que tenha relevância geral.
+	</p>
+	
+	<p>Este miniblog foi criado com a ajuda do livro <strong>Curso Intensivo de Python</strong> de Eric Matthes.</p>
+
+	<a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+		role="button">Registrar &raquo; </a>
+
+</div>
 
 
 
-<p>
-	Este mini-blog foi criado com intuito de organizar os estudos de Python, Django, programação em geral...ou, ainda, qualquer tema que tenha relevância geral.
-</p>
 
-<p>Este miniblog foi criado com a ajuda do livro <strong>Curso Intensivo de Python</strong> de Eric Matthes.</p>
-
-{% endblock content %}
+{% endblock page_header %}
