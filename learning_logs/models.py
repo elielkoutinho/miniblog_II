@@ -17,9 +17,9 @@ class Topic(models.Model):
 		
 
 class Entry(models.Model):
-	topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-	text = models.TextField()
-	date_added = models.DateTimeField(auto_now_add=True)
+	topic = models.ForeignKey(Topic, on_delete=models.CASCADE, verbose_name='tópico')
+	text = models.TextField(verbose_name='comentários')
+	date_added = models.DateTimeField(auto_now_add=True, verbose_name='data')
 
 	class Meta:
 		verbose_name_plural = 'entradas'
