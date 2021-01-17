@@ -17,7 +17,7 @@ class EntryForm(forms.ModelForm):
 	class Meta:
 		model = Entry
 		fields = ['text']
-		labels = {'text': 'Entrada'} # nao tinha func., tinha posto chaves.
+		labels = {'text': 'Entrada'} # nao tinha func., não tinha posto chaves.
 		widgets = {'text': forms.Textarea(attrs={'cols': 80})}
 
 
